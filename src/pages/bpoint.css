@@ -1,0 +1,25 @@
+.frame-field {
+  /* Give the iframe something to grow into */
+  height: 44px; /* or whatever you like */
+  border: 1px solid #ccc; /* just to see the box while testing */
+  border-radius: 4px;
+  overflow: hidden; /* optional */
+}
+
+/* optional, but nice */
+.frame-field iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.is-focused {
+  outline: 2px solid #1976d2;
+}
+
+.is-valid {
+  outline: 2px solid #2e7d32;
+}
+
+.is-invalid {
+  outline: 2px solid #d32f2f;
+}

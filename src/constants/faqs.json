@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is a smart meter? Do I need one?",
+    "answer": "Smart meters record your energy usage in real-time and securely communicates the data. It's not mandatory to have a smart meter, but most iO Energy customers do. They allow time-of-use pricing, enable more accurate billing, eliminate the need for manual meter readings, and provide you with valuable insight into your energy consumption."
+  },
+  {
+    "question": "Am I going to save money?",
+    "answer": "Your savings will vary depending on your energy usage habits. Not everyone will save, but it is not uncommon for iO Energy to save residential and small business customers hundreds, thousands, and even tens of thousands of dollars per annum. We recommend sending your bill to our customer support team for assessment. Also keep in mind our pricing offers you a way to improve!"
+  },
+  {
+    "question": "What if I use power outside of the daytime?",
+    "answer": "If you primarily use electricity during off-peak hours, you're already on the right track for saving money with our Time of Use pricing. Our plans are designed to reward customers who can adjust their energy consumption to take advantage of lower rates during these times. However, even if you use less power during the day, you can still benefit from a smart meter and gain more control over your energy usage and billing accuracy."
+  },
+  {
+    "question": "I’m renting, can I still sign up?",
+    "answer": "Yes. iO Energy already supplies residential and commercial tenants. Simply sign up. We'll do the rest."
+  },
+  {
+    "question": "Do you have an app?",
+    "answer": "Yes, we do! We offer access to our web portal that allows you to conveniently monitor your energy usage, check your billing information, and access helpful tools to manage your energy consumption, making it easy for you to stay connected and in control of your energy usage wherever you are."
+  }
+]

@@ -1,0 +1,135 @@
+{
+  "saSustainableHomePlan": {
+    "displayed": "true",
+    "planName": "saSustainableHomePlan",
+    "formattedPlanName": "SA Sustainable Home Plan",
+    "tagline": "Our most powerful time-of-use plan",
+    "offeringCode": "IO_RES_SH",
+    "highlights": [
+      "A full six hours of energy at 8c/kWh, every day of the year",
+      "Suits hot water systems, EVs, batteries, pools and home offices",
+      "No need for solar or batteries to benefit from renewables"
+    ],
+    "planDescriptor": "",
+    "planDescriptors": [
+      [
+        "Feed-In Tariff - Peak: 33c/kWh 6pm-9pm; Off-peak: 2.5c/kWh from 10am - 6pm; Shoulder: 6.5c/kWh all other times. Premium feed in tariff is 44c/kWh in addition to the above standard FiT for eligible customers."
+      ],
+      [
+        "Supply charge: 145c/day I Controlled load: 12/28/53c/kWh depending on time I Network: SAPN Network tariff: RELE I Baseload average: 36c/kWh I No lock-in contract"
+      ]
+    ],
+    "estimatedCosts": [
+      "Estimated annual cost for 4,011 kWh is $2,086.98 (8% less than reference price)",
+      "Estimated annual cost w/controlled load for 6,016 kWh is $2,525.70 (9% less than reference)"
+    ],
+    "planPrice": "HOMEPRICE",
+    "planConditions": "",
+    "basicPlanInformation": "",
+    "planConditionsLink": "https://www.ioenergy.com.au/bpids",
+    "planBasicInformationLink": "https://www.ioenergy.com.au/bpids",
+    "bpidLinks": [
+      {
+        "name": "Basic plan information",
+        "href": "https://www.ioenergy.com.au/bpids"
+      }
+    ],
+    "shortName": "Home Plan",
+    "rateCard": "Electrify-rate-card.svg",
+    "bpids": [
+      {
+        "tagline": "For residences on the RELE tariff",
+        "link": "https://ioenergy-public-assets.s3.ap-southeast-2.amazonaws.com/plans/bpids/LCL577201MRE2_SA_CZ4.pdf"
+      },
+      {
+        "tagline": "For residences on the RTOU tariff",
+        "link": "https://ioenergy-public-assets.s3.ap-southeast-2.amazonaws.com/plans/bpids/LCL577197MRE3_SA_CZ4.pdf"
+      },
+      {
+        "tagline": "For residences on the RSR tariff",
+        "link": "https://ioenergy-public-assets.s3.ap-southeast-2.amazonaws.com/plans/bpids/LCL577193MRE2_SA_CZ4.pdf"
+      }
+    ]
+  },
+  "saBasicHomePlan": {
+    "displayed": "false",
+    "formattedPlanName": "SA Basic Home Plan",
+    "bpids": [
+      {
+        "tagline": "Our basic residential offer",
+        "link": "https://ioenergy-public-assets.s3.ap-southeast-2.amazonaws.com/IOE667952MRE1_SA_CZ4.pdf"
+      }
+    ]
+  },
+  "saSmartBusinessPlan": {
+    "displayed": "true",
+    "planName": "saSmartBusinessPlan",
+    "formattedPlanName": "SA Smart Business Plan",
+    "tagline": "Smart businesses use cleaner energy",
+    "offeringCode": "IO_SME_SB",
+    "highlights": [
+      "Use solar power without buying solar panels",
+      "Cheap daytime energy during core business hours",
+      "Great for cafes, offices, schools, and 9-5 businesses"
+    ],
+    "planDescriptor": "",
+    "planDescriptors": [
+      [
+        "Feed-In Tariff Peak: 20c/kWh; Off-peak: 1c/kWh; and All Other Times: 5c/kWh (nb: timings match usage timings for usage)"
+      ],
+      [
+        "Supply charge: 185c/day | Network: SAPN | Baseload average: 39.6c/kWh | No lock-in contract"
+      ]
+    ],
+
+    "planPrice": "BUSINESSPRICE",
+    "planConditions": "",
+    "basicPlanInformation": "",
+    "planConditionsLink": "https://www.ioenergy.com.au/bpids",
+    "planBasicInformationLink": "https://www.ioenergy.com.au/bpids",
+    "bpidLinks": [
+      {
+        "name": "Basic plan information",
+        "href": "https://www.ioenergy.com.au/bpids"
+      }
+    ],
+    "shortName": "Business Plan",
+    "rateCard": "SBTOUE-rate-card.svg",
+    "bpids": [
+      {
+        "tagline": "For businesses on the SBTOUE tariff",
+        "link": "https://drive.google.com/file/d/1Y8oL1F3XZJuuAD_aLhOOJQB2AygkgT8T/view?usp=sharing"
+      },
+      {
+        "tagline": "For businesses on the SBTOU tariff",
+        "link": "https://ioenergy-public-assets.s3.ap-southeast-2.amazonaws.com/plans/bpids/LCL577213MBE2_SA_CZ4.pdf"
+      },
+      {
+        "tagline": "For businesses on the SBTOUD tariff",
+        "link": "https://drive.google.com/file/d/1otISZzPXgNQqmByAoJUgtvr6euG6Or8G/view?usp=sharing"
+      },
+      {
+        "tagline": "For businesses on the B2R tariff",
+        "link": "https://ioenergy-public-assets.s3.ap-southeast-2.amazonaws.com/plans/bpids/LCL577211MBE2_SA_CZ4.pdf"
+      },
+      {
+        "tagline": "For businesses on the BSR tariff",
+        "link": "https://ioenergy-public-assets.s3.ap-southeast-2.amazonaws.com/plans/bpids/LCL577205MBE2_SA_CZ4.pdf"
+      }
+    ]
+  },
+  "saBasicBusinessPlan": {
+    "displayed": "false",
+    "formattedPlanName": "SA Basic Business Plan",
+    "bpids": [
+      {
+        "tagline": "Our basic business offer",
+        "link": "https://ioenergy-public-assets.s3.ap-southeast-2.amazonaws.com/IOE667953MBE1_SA_CZ4.pdf"
+      },
+      {
+        "tagline": "Our basic time-of-use business offer",
+        "link": "https://ioenergy-public-assets.s3.ap-southeast-2.amazonaws.com/IOE668293MBE1_SA_CZ4.pdf"
+      }
+    ]
+  }
+}
