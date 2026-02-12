@@ -8,16 +8,19 @@ import Plans from "../components/plans/Plans";
 import PrimaryMarketing from "../components/marketing/PrimaryMarketing";
 import { Box, Stack, Container, Typography, Button } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
-import heroImage from "../assets/images/unsplash-2gDwlIim3Uw.jpg";
+import heroImage from "../assets/images/team/house.png";
 // import heroDiagram from "../assets/images/diagram-usage-comparison.svg";
 import BrandDot from "../components/shared/BrandDot";
 import BillComparionCTA from "../components/billing/BillComparisonCTA";
-
+import FAQS from "../components/marketing/FAQs";
 import media1 from "../assets/images/media/image 112.png";
 import media2 from "../assets/images/media/image 111.png";
 import media3 from "../assets/images/media/image 118.png";
 import media4 from "../assets/images/media/image 107.png";
 import media5 from "../assets/images/media/image 106.png";
+import Services from "../components/services/Services";
+import Work from "../components/works/work";
+import TestimonialsSection from "../components/Testimonials/TestimonialsSection";
 
 const HeroGeoInputWrapper = forwardRef(function HeroGeoInputWrapper(
   { children, ...props },
@@ -46,177 +49,114 @@ export default function Home() {
 
       <Stack justifyContent="center" alignItems="center" overflow="hidden">
         {/* Hero section */}
+        {/* Hero section */}
         <Box
           sx={{
-            width: 1,
-            pr: { md: 6 },
-            pt: 12,
-            backgroundColor: "primary.main",
+            width: "100%",
+            pt: { xs: 8, md: 14 },
+            pb: { xs: 6, md: 10 },
+            backgroundColor: "#ffffff",
           }}
         >
           <Container maxWidth="lg">
             <Stack
-              direction="column"
-              alignItems="flex-start"
-              color="text.contrastText"
-              spacing={{ xs: 4, lg: 0 }}
+              direction={{ xs: "column", md: "row" }}
+              alignItems="center"
+              justifyContent="space-between"
+              spacing={{ xs: 6, md: 4 }}
             >
+              {/* LEFT CONTENT */}
               <Stack
-                direction="row"
-                alignItems="center"
-                justifyContent={{ xs: "center", md: "space-between" }}
-                columnGap={6}
-                sx={{ width: 1 }}
+                spacing={2}
+                sx={{ maxWidth: 560 }}
+                textAlign={{ xs: "center", md: "left" }}
               >
-                <Stack
-                  sx={{ maxWidth: 600 }}
-                  textAlign={{ xs: "center", md: "left" }}
+                <Typography
+                  variant="h4"
+                  sx={{ fontStyle: "italic", fontWeight: 400 }}
                 >
-                  <Typography variant="h4">
-                    <em>The easiest way to</em>
-                  </Typography>
-                  <Typography variant="h3">
-                    pay less for clean energy
-                    <BrandDot />
-                  </Typography>
-                  <Typography variant="subtitle1" sx={{ mt: 2 }}>
-                    We help Aussie homes and businesses save on their energy
-                    bills by being smarter users, and using cheap daytime
-                    energy.
-                  </Typography>
-                  <Stack
-                    direction="row"
-                    alignItems="center"
-                    justifyContent="space-around"
-                    sx={{ mt: 6, width: 1 }}
-                    spacing={1}
-                    useFlexGap
-                    flexWrap="wrap"
-                  >
-                    <Stack
-                      direction="row"
-                      alignItems="center"
-                      justifyContent="space-around"
-                      spacing={3}
-                    >
-                      <Box
-                        component="img"
-                        src={media1}
-                        sx={{ height: "1.2rem" }}
-                      />
-                      <Box
-                        component="img"
-                        src={media2}
-                        sx={{ height: "1.1rem" }}
-                      />
-                      <Box
-                        component="img"
-                        src={media3}
-                        sx={{ height: "1.8rem" }}
-                      />
-                    </Stack>
-                    <Stack
-                      direction="row"
-                      alignItems="center"
-                      justifyContent="space-around"
-                      spacing={3}
-                    >
-                      <Box
-                        component="img"
-                        src={media4}
-                        sx={{ height: "1rem" }}
-                      />
-                      <Box
-                        component="img"
-                        src={media5}
-                        sx={{ height: "1rem" }}
-                      />
-                    </Stack>
-                  </Stack>
-                </Stack>
+                  The easiest way to
+                </Typography>
 
-                {/* Hero image */}
-                <Stack
+                <Typography
+                  variant="h2"
                   sx={{
-                    position: "relative",
-                    display: { xs: "none", md: "block" },
+                    fontWeight: 700,
+                    lineHeight: 1.2,
                   }}
                 >
-                  <Box
-                    component="img"
+                  pay less for clean energy
+                  <BrandDot />
+                </Typography>
+
+                <Typography
+                  variant="subtitle1"
+                  sx={{ color: "text.secondary", mt: 1 }}
+                >
+                  We help Aussie homes and businesses save on their energy bills
+                  by being smarter users, and using cheap daytime energy.
+                </Typography>
+
+                {/* CTA BUTTON */}
+                <Stack
+                  direction="row"
+                  justifyContent={{ xs: "center", md: "flex-start" }}
+                  mt={3}
+                >
+                  <Button
+                    variant="contained"
+                    endIcon={<SearchIcon />}
                     sx={{
-                      width: { md: 300, lg: 400 },
-                      aspectRatio: "5/4",
-                      objectFit: "cover",
-                      objectPosition: "right",
-                      borderTopLeftRadius: "45%",
-                      borderBottomRightRadius: "45%",
-                      borderTopRightRadius: "0.4rem",
-                      borderBottomLeftRadius: "0.4rem",
+                      borderRadius: "999px",
+                      px: 4,
+                      py: 1.3,
+                      textTransform: "none",
+                      fontWeight: 600,
                     }}
-                    alt="white house with a picket fence and autumn leaves"
-                    src={heroImage}
-                  />
+                  >
+                    Contact us
+                  </Button>
+                </Stack>
+
+                {/* MEDIA LOGOS */}
+                <Stack
+                  direction="row"
+                  justifyContent={{ xs: "center", md: "flex-start" }}
+                  alignItems="center"
+                  spacing={3}
+                  mt={5}
+                  flexWrap="wrap"
+                >
+                  <Box component="img" src={media1} sx={{ height: 18 }} />
+                  <Box component="img" src={media2} sx={{ height: 16 }} />
+                  <Box component="img" src={media3} sx={{ height: 26 }} />
+                  <Box component="img" src={media4} sx={{ height: 14 }} />
+                  <Box component="img" src={media5} sx={{ height: 14 }} />
                 </Stack>
               </Stack>
 
-              {/* <HeroGeoInputWrapper ref={ref} sx={{ width: 1 }}>
-                <Stack
+              {/* RIGHT IMAGE */}
+              <Box
+                sx={{
+                  display: { xs: "none", md: "block" },
+                  position: "relative",
+                }}
+              >
+                <Box
+                  component="img"
+                  src={heroImage} // use the imported image
+                  alt="Modern energy efficient home"
                   sx={{
-                    mt: 4,
-                    mb: { xs: 8, sm: 6, md: 1 },
-                    maxWidth: { md: 700, lg: 600 },
-                    width: 1,
-                    mx: { xs: "auto", lg: 0 },
+                    width: { md: 360, lg: 420 },
+                    height: { md: 300, lg: 360 },
+                    objectFit: "cover",
+                    borderTopLeftRadius: "30%",
+                    borderTopRightRadius: "12px", // You had two top-right radius before, pick one
+                    borderBottomRightRadius: "30%",
+                    borderBottomLeftRadius: "12px",
                   }}
-                >
-                  {address ? (
-                    <Stack alignItems="flex-end">
-                      <Box
-                        sx={{
-                          width: 1,
-                          bgcolor: "primary.light",
-                          px: 4,
-                          py: 2,
-                          border: "white",
-                          borderRadius: "9999px",
-                        }}
-                      >
-                        <Typography
-                          variant="h6"
-                          color="white"
-                          sx={{ whiteSpace: "nowrap" }}
-                        >
-                          {address.site_formatted_address}
-                        </Typography>
-                      </Box>
-                      <Button
-                        variant="text"
-                        color="secondary"
-                        sx={{ fontSize: "0.8rem", mr: 3 }}
-                        onClick={() => setAddress(null)}
-                      >
-                        Search again
-                      </Button>
-                    </Stack>
-                  ) : (
-                    <GeoInput
-                      id="hero-geo-input"
-                      icon={<SearchIcon sx={{ ml: 1.5 }} />}
-                      address={address}
-                      handleAddressChange={(address) => {
-                        setAddress(address);
-                        setTimeout(() => {
-                          // Scroll to show plans, using a delay to allow plan rendering to complete first
-                          ref.current?.scrollIntoView({
-                            behavior: "smooth",
-                          });
-                        }, 150);
-                      }}
-                    />
-                  )}
-                </Stack>
-              </HeroGeoInputWrapper> */}
+                />
+              </Box>
             </Stack>
           </Container>
         </Box>
@@ -230,7 +170,7 @@ export default function Home() {
         )} */}
 
         {/* Curve at the bottom of the hero section */}
-        <Box
+        {/* <Box
           sx={{
             mt: "-1px",
             width: "100%",
@@ -250,13 +190,17 @@ export default function Home() {
               </clipPath>
             </defs>
           </svg>
-        </Box>
+        </Box> */}
 
         <Container sx={{ mt: 4 }}>
           <BillComparionCTA />
         </Container>
 
         <PrimaryMarketing />
+        <Services />
+        <Work />
+        <TestimonialsSection />
+        <FAQS />
 
         {/* Call to action */}
         {/* <Container sx={{ my: 4 }}>

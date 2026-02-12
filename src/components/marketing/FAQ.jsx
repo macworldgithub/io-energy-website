@@ -1,65 +1,84 @@
 import PropTypes from "prop-types";
 import { styled } from "@mui/material/styles";
-import { Typography } from "@mui/material";
-import MuiAccordion from "@mui/material/Accordion";
-import MuiAccordionSummary from "@mui/material/AccordionSummary";
-import MuiAccordionDetails from "@mui/material/AccordionDetails";
+import {
+  Accordion as MuiAccordion,
+  AccordionSummary as MuiAccordionSummary,
+  AccordionDetails as MuiAccordionDetails,
+  Typography,
+} from "@mui/material";
 import AddRoundedIcon from "@mui/icons-material/AddRounded";
 import RemoveRoundedIcon from "@mui/icons-material/RemoveRounded";
 
-const Accordion = styled((props) => (
-  <MuiAccordion disableGutters elevation={0} square {...props} />
-))(({ theme }) => ({
+const Accordion = styled(MuiAccordion)(({ theme }) => ({
   borderBottom: `1px solid ${theme.palette.divider}`,
-  "&:last-child": {
-    borderBottom: 0,
-  },
-  "&:before": {
-    display: "none",
-  },
+  borderRadius: 0,
+  boxShadow: "none",
+  "&:before": { display: "none" },
+  "&:last-child": { borderBottom: 0 },
 }));
 
-const AccordionSummary = (props) => (
-  <MuiAccordionSummary
-    expandIcon={props.open ? <RemoveRoundedIcon /> : <AddRoundedIcon />}
-    {...props}
-  />
-);
-AccordionSummary.propTypes = {
-  open: PropTypes.bool,
-};
+const AccordionSummary = styled(MuiAccordionSummary)(({ theme }) => ({
+  padding: theme.spacing(2.5, 0),
+  minHeight: 72,
+  "& .MuiAccordionSummary-content": {
+    margin: 0,
+  },
+  "& .MuiAccordionSummary-expandIconWrapper": {
+    color: theme.palette.text.secondary,
+  },
+}));
 
 const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
-  padding: theme.spacing(2),
+  padding: theme.spacing(0, 0, 4, 0),
 }));
 
-FAQ.propTypes = {
-  id: PropTypes.string,
-  question: PropTypes.string,
-  answer: PropTypes.string,
-  expanded: PropTypes.string,
-  setExpanded: PropTypes.func,
-};
-
 export default function FAQ({ id, question, answer, expanded, setExpanded }) {
+  const open = expanded === id;
+
   const handleChange = (event, isExpanded) => {
     setExpanded(isExpanded ? id : "");
   };
 
   return (
-    <Accordion expanded={expanded === id} onChange={handleChange}>
-      <AccordionSummary open={expanded === id}>
+    <Accordion expanded={open} onChange={handleChange}>
+      <AccordionSummary
+        expandIcon={open ? <RemoveRoundedIcon /> : <AddRoundedIcon />}
+        aria-controls={`${id}-content`}
+        id={`${id}-header`}
+      >
         <Typography
           variant="h6"
-          fontSize={{ xs: "0.9rem", md: "1rem" }}
-          sx={{ pr: 2 }}
+          sx={{
+            fontSize: { xs: "1.05rem", md: "1.15rem" },
+            fontWeight: open ? 600 : 500,
+            color: open ? "primary.main" : "text.primary",
+            pr: 3,
+          }}
         >
           {question}
         </Typography>
       </AccordionSummary>
+
       <AccordionDetails>
-        <Typography>{answer}</Typography>
+        <Typography
+          variant="body1"
+          color="text.secondary"
+          sx={{
+            lineHeight: 1.7,
+            fontSize: { xs: "0.95rem", md: "1.05rem" },
+          }}
+        >
+          {answer}
+        </Typography>
       </AccordionDetails>
     </Accordion>
   );
 }
+
+FAQ.propTypes = {
+  id: PropTypes.string.isRequired,
+  question: PropTypes.string.isRequired,
+  answer: PropTypes.string.isRequired,
+  expanded: PropTypes.string.isRequired,
+  setExpanded: PropTypes.func.isRequired,
+};

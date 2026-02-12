@@ -27,7 +27,7 @@ export default function BillComparisonCTA() {
       <Button
         href="mailto:hello@ioenergy.com.au?subject=I've attached my bill for a comparison&body=Hi iO Energy,%0A%0APlease find attached my electricity bill for a comparison. My phone number is: <YOUR NUMBER HERE>.%0A%0AI give permission for iO Energy to access my meter data from SA Power Networks for the purpose of an energy analysis."
         variant="contained"
-        color="secondary"
+        color="primary"
         sx={{ mt: 3 }}
       >
         Email us your bill
