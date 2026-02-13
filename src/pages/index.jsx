@@ -19,7 +19,7 @@ import media3 from "../assets/images/media/image 118.png";
 import media4 from "../assets/images/media/image 107.png";
 import media5 from "../assets/images/media/image 106.png";
 import Services from "../components/services/Services";
-import Work from "../components/works/work";
+import Work from "../components/works/Work";
 import TestimonialsSection from "../components/Testimonials/TestimonialsSection";
 
 const HeroGeoInputWrapper = forwardRef(function HeroGeoInputWrapper(
