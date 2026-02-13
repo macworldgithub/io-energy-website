@@ -196,31 +196,19 @@ import {
   Menu,
   Container,
   MenuItem,
-  Typography,
   Divider,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
 const pages = [
   { label: "Home", href: "/" },
-  {
-    label: "About Us",
-    href: "/about",
-    // dropdown: true,
-    // items: [
-    //   { label: "Our Story", href: "/about#story" },
-    //   { label: "Team", href: "/about#team" },
-    //   { label: "Careers", href: "/careers" },
-    // ],
-  },
+  { label: "About Us", href: "/aboutUs" },
   { label: "Services", href: "/services" },
   { label: "Why Choose io", href: "/customers" },
 ];
 
 function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElAbout, setAnchorElAbout] = React.useState(null);
 
   return (
     <AppBar position="static" sx={{ py: 1.5, backgroundColor: "white" }}>
@@ -236,6 +224,7 @@ function Navbar() {
             />
           </Link>
 
+          {/* Desktop Menu */}
           <Stack
             direction="row"
             alignItems="center"
@@ -245,51 +234,23 @@ function Navbar() {
               ml: 6,
             }}
           >
-            {pages.map((page) =>
-              page.dropdown ? (
-                <React.Fragment key={page.label}>
-                  <Button
-                    onClick={(e) => setAnchorElAbout(e.currentTarget)}
-                    endIcon={<KeyboardArrowDownIcon />}
-                    sx={navBtnStyle}
-                  >
-                    {page.label}
-                  </Button>
-
-                  <Menu
-                    anchorEl={anchorElAbout}
-                    open={Boolean(anchorElAbout)}
-                    onClose={() => setAnchorElAbout(null)}
-                  >
-                    {page.items.map((item) => (
-                      <MenuItem
-                        key={item.label}
-                        component={Link}
-                        href={item.href}
-                        onClick={() => setAnchorElAbout(null)}
-                      >
-                        {item.label}
-                      </MenuItem>
-                    ))}
-                  </Menu>
-                </React.Fragment>
-              ) : (
-                <Button
-                  key={page.label}
-                  component={Link}
-                  href={page.href}
-                  sx={navBtnStyle}
-                >
-                  {page.label}
-                </Button>
-              ),
-            )}
+            {pages.map((page) => (
+              <Button
+                key={page.label}
+                component={Link}
+                href={page.href}
+                sx={navBtnStyle}
+              >
+                {page.label}
+              </Button>
+            ))}
 
             <Button variant="contained" href="/contact" sx={ctaStyle}>
               Contact Us →
             </Button>
           </Stack>
 
+          {/* Mobile Menu */}
           <Box sx={{ display: { xs: "flex", lg: "none" } }}>
             <IconButton onClick={(e) => setAnchorElNav(e.currentTarget)}>
               <MenuIcon />
@@ -302,36 +263,16 @@ function Navbar() {
               anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
               transformOrigin={{ vertical: "top", horizontal: "right" }}
             >
-              {pages.map((page) =>
-                page.dropdown ? (
-                  <Box key={page.label}>
-                    <MenuItem disabled sx={{ fontWeight: 700 }}>
-                      {page.label}
-                    </MenuItem>
-                    {page.items.map((item) => (
-                      <MenuItem
-                        key={item.label}
-                        component={Link}
-                        href={item.href}
-                        onClick={() => setAnchorElNav(null)}
-                        sx={{ pl: 4 }}
-                      >
-                        {item.label}
-                      </MenuItem>
-                    ))}
-                    <Divider />
-                  </Box>
-                ) : (
-                  <MenuItem
-                    key={page.label}
-                    component={Link}
-                    href={page.href}
-                    onClick={() => setAnchorElNav(null)}
-                  >
-                    {page.label}
-                  </MenuItem>
-                ),
-              )}
+              {pages.map((page) => (
+                <MenuItem
+                  key={page.label}
+                  component={Link}
+                  href={page.href}
+                  onClick={() => setAnchorElNav(null)}
+                >
+                  {page.label}
+                </MenuItem>
+              ))}
 
               <Divider />
 
